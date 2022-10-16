@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { AttachmentBuilder } from 'discord.js';
 import type { RenderMessageContext } from './generator';
 

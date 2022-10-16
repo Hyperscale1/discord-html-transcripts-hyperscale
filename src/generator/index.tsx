@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ChannelType, type Awaitable, type Channel, type Message, type Role, type User } from 'discord.js';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
@@ -38,7 +39,7 @@ export default async function renderMessages({ messages, channel, callbacks, ...
   }
 
   const elements = (
-    <DiscordMessages style={{ minHeight: '100vh' }}>
+    <DiscordMessages style={{ minHeight: '100vh', alignItems: 'center', color: 'red' }}>
       {/* header */}
       <DiscordHeader
         guild={channel.isDMBased() ? 'Direct Messages' : channel.guild.name}
@@ -54,36 +55,27 @@ export default async function renderMessages({ messages, channel, callbacks, ...
         {channel.isThread()
           ? `Thread channel in ${channel.parent?.name ?? 'Unknown Channel'}`
           : channel.isDMBased()
-          ? `Direct Messages`
-          : channel.isVoiceBased()
-          ? `Voice Text Channel for ${channel.name}`
-          : channel.type === ChannelType.GuildCategory
-          ? `Category Channel`
-          : 'topic' in channel && channel.topic
-          ? await renderContent(channel.topic, { messages, channel, callbacks, type: RenderType.REPLY, ...options })
-          : `This is the start of #${channel.name} channel.`}
+            ? `Direct Messages`
+            : channel.isVoiceBased()
+              ? `Voice Text Channel for ${channel.name}`
+              : channel.type === ChannelType.GuildCategory
+                ? `Category Channel`
+                : 'topic' in channel && channel.topic
+                  ? await renderContent(channel.topic, { messages, channel, callbacks, type: RenderType.REPLY, ...options })
+                  : `This is the start of #${channel.name} channel.`}
       </DiscordHeader>
 
       {/* body */}
       {chatBody}
-
-      {/* footer */}
-      <div style={{ textAlign: 'center', width: '100%' }}>
-        Exported {messages.length} message{messages.length > 1 ? 's' : ''}.{' '}
-        {options.poweredBy ? (
-          <span style={{ textAlign: 'center' }}>
-            Powered by{' '}
-            <a href="https://github.com/ItzDerock/discord-html-transcripts" style={{ color: 'lightblue' }}>
-              discord-html-transcripts
-            </a>
-            .
-          </span>
-        ) : null}
-      </div>
     </DiscordMessages>
   );
 
+
+
+  
+
   return ReactDOMServer.renderToStaticMarkup(
+    
     <html>
       <head>
         <meta name="viewport" content="width=device-width" />

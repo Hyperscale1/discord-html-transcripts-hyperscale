@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { DiscordReply } from '@derockdev/discord-components-react';
 import { type Message, UserFlags } from 'discord.js';
 import type { RenderMessageContext } from '..';

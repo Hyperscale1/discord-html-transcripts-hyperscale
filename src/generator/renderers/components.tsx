@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { DiscordActionRow, DiscordButton } from '@derockdev/discord-components-react';
 import { ButtonStyle, ComponentType, type MessageActionRowComponent, type ActionRow } from 'discord.js';
 import React from 'react';

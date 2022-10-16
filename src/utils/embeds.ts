@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import type { APIEmbedField } from 'discord.js';
 
 export const calculateAmountOfTrue = (array: boolean[]) => {

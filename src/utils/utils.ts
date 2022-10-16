@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import type { APIMessageComponentEmoji, Emoji } from 'discord.js';
 import { request } from 'undici';
 import twemoji from 'twemoji';

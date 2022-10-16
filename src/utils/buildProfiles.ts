@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { type GuildMember, type Message, type User, UserFlags } from 'discord.js';
 
 export type Profile = {

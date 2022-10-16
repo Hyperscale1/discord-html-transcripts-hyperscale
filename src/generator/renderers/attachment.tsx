@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { DiscordAttachment, DiscordAttachments } from '@derockdev/discord-components-react';
 import React from 'react';
 import type { Attachment, Message } from 'discord.js';

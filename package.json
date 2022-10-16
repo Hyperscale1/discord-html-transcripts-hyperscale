@@ -1,9 +1,9 @@
 {
-  "name": "discord-html-transcripts",
-  "version": "3.0.0",
-  "description": "A nicely formatted html transcript generator for discord.js.",
+  "name": "discord-html-transcripts-hyperscale",
+  "version": "1.0.0",
+  "description": "A nicely formatted html transcript generator for discord.js. Edited by Hyperscale#0001",
   "main": "dist/index.js",
-  "homepage": "https://github.com/ItzDerock/discord-html-transcripts",
+  "homepage": "https://github.com/Hyperscale1/discord-html-transcripts-hyperscale",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ItzDerock/discord-html-transcripts.git"
+    "url": "git+https://github.com/Hyperscale1/discord-html-transcripts-hyperscale.git"
   },
   "keywords": [
     "discord.js",
